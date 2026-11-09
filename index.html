@@ -4,514 +4,509 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Special Sister + Bestie ♡</title>
+<title>For My Bestie Emaan ♡</title>
 
 <style>
-* { box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-  margin: 0;
-  background: #fff0f5;
-  color: #75445b;
-  font-family: Georgia, serif;
-  text-align: center;
-  overflow-x: hidden;
+    background: #fff0f5;
+    color: #75445b;
+    font-family: Georgia, serif;
+    text-align: center;
+    overflow-x: hidden;
 }
 
 button {
-  border: none;
-  background: #d98eae;
-  color: white;
-  padding: 13px 23px;
-  border-radius: 30px;
-  font-size: 15px;
-  margin: 7px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px #eac5d5;
+    border: none;
+    background: #d98eae;
+    color: white;
+    padding: 12px 23px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 10px 5px;
 }
 
-button:active { transform: scale(.96); }
-
-h1 { color: #a34f75; font-size: 35px; }
-h2 { color: #a34f75; }
-p { line-height: 1.9; }
+button:hover {
+    background: #c56f96;
+}
 
 .page {
-  display: none;
-  min-height: 100vh;
-  padding: 35px 17px;
-  animation: appear .7s ease;
+    display: none;
+    min-height: 100vh;
+    padding: 35px 18px;
+    animation: fadeIn 0.7s ease;
 }
 
-.page.active { display: block; }
-
-@keyframes appear {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+.page.active {
+    display: block;
 }
 
-/* Opening */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
+/* Opening screen */
 #opening {
-  position: fixed;
-  inset: 0;
-  z-index: 10;
-  background: linear-gradient(145deg,#fff0f5,#f5d3e1,#fff7fa);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  transition: opacity .8s;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #ffe0eb, #fff4f7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.8s ease;
+    padding: 20px;
 }
 
-.open-card {
-  background: #fffafd;
-  border-radius: 28px;
-  padding: 35px 20px;
-  width: 100%;
-  max-width: 380px;
-  box-shadow: 0 10px 35px #e8b9ce;
+.opening-card {
+    background: white;
+    padding: 35px 22px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px #e6a9c2;
+    max-width: 370px;
+    width: 100%;
 }
 
-.open-card h1 { font-size: 36px; }
-
-.flower {
-  font-size: 55px;
-  animation: sway 3s infinite ease-in-out;
+.opening-card h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
-@keyframes sway {
-  50% { transform: rotate(12deg) scale(1.1); }
+.opening-card p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* General cards */
+.card {
+    background: #fff;
+    padding: 25px 18px;
+    border-radius: 22px;
+    max-width: 500px;
+    margin: 25px auto;
+    box-shadow: 0 5px 18px #edc4d5;
+}
+
+h1, h2 {
+    margin-bottom: 18px;
+}
+
+p {
+    line-height: 1.8;
 }
 
 /* Home */
-
 .hero {
-  background: linear-gradient(145deg,#f9dce8,#fff8fb);
-  border-radius: 30px;
-  padding: 40px 18px;
-  margin: 12px auto;
-  max-width: 500px;
+    padding-top: 65px;
 }
 
-.card {
-  background: #fffafd;
-  border-radius: 25px;
-  padding: 25px 17px;
-  max-width: 600px;
-  margin: 20px auto;
-  box-shadow: 0 5px 20px #eac5d5;
+.hero h1 {
+    font-size: 32px;
 }
 
-.eyebrow {
-  letter-spacing: 3px;
-  font-size: 11px;
-  color: #b66e8e;
+.hero p {
+    margin: 15px auto;
+    max-width: 400px;
 }
 
 /* Gallery */
-
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 15px 10px;
-  max-width: 600px;
-  margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 500px;
+    margin: 25px auto;
 }
 
 .polaroid {
-  background: white;
-  padding: 8px 8px 20px;
-  box-shadow: 0 5px 15px #d9b6c6;
-  transform: rotate(-2deg);
-  border-radius: 3px;
-  cursor: pointer;
+    background: white;
+    padding: 9px 9px 18px;
+    box-shadow: 0 4px 12px #d9a9bd;
+    transform: rotate(-2deg);
+    border-radius: 4px;
 }
 
 .polaroid:nth-child(even) {
-  transform: rotate(2deg);
-  margin-top: 15px;
+    transform: rotate(2deg);
 }
 
 .polaroid img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  background: #f5dce7;
-  display: block;
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .polaroid p {
-  margin: 10px 0 0;
-  font-size: 13px;
+    margin-top: 8px;
+    font-size: 13px;
 }
 
 /* Letter */
-
 .letter {
-  background: #fffaf4;
-  padding: 30px 23px;
-  border-radius: 8px;
-  max-width: 480px;
-  margin: 25px auto;
-  box-shadow: 0 5px 20px #e9c9d4;
-  text-align: left;
-  line-height: 2;
+    text-align: left;
+    white-space: pre-line;
+    line-height: 2;
+    font-size: 16px;
 }
 
-/* Music */
-
+/* Music page */
 .music-box {
-  background: #f9e1eb;
-  padding: 25px 15px;
-  border-radius: 22px;
-  margin: 20px auto;
-  max-width: 400px;
+    background: white;
+    padding: 35px 18px;
+    border-radius: 25px;
+    max-width: 430px;
+    margin: 35px auto;
+    box-shadow: 0 5px 18px #edc4d5;
+}
+
+.music-box h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.music-box p {
+    font-size: 17px;
 }
 
 .music-icon {
-  font-size: 45px;
-  animation: sway 3s infinite ease-in-out;
+    font-size: 45px;
+    margin-bottom: 18px;
+    animation: musicBeat 1.5s infinite;
 }
 
-/* Completely hide audio controls */
-
-#bgMusic {
-  display: none;
+@keyframes musicBeat {
+    50% { transform: scale(1.15); }
 }
 
-/* Floating hearts */
-
-.heart {
-  position: fixed;
-  top: -30px;
-  color: #df91b0;
-  animation: fall 7s linear forwards;
-  pointer-events: none;
-  z-index: 20;
+/* Reasons */
+.reason {
+    background: white;
+    padding: 18px;
+    margin: 15px auto;
+    max-width: 450px;
+    border-radius: 18px;
+    box-shadow: 0 3px 12px #edc4d5;
 }
 
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
+/* Final surprise */
+.surprise {
+    font-size: 19px;
+    line-height: 2;
 }
 
-/* Image zoom */
-
+/* Photo zoom */
 #photoView {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: #000c;
-  z-index: 30;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000d;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 #photoView img {
-  max-width: 100%;
-  max-height: 75vh;
-  border: 10px solid white;
+    max-width: 95%;
+    max-height: 85vh;
+    border: 8px solid white;
+    border-radius: 8px;
 }
 
-/* Navigation */
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    animation: floatUp 6s linear forwards;
+    pointer-events: none;
+    z-index: 10;
+}
 
-nav {
-  margin: 20px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 footer {
-  padding: 30px 10px;
-  color: #b16c8c;
-  font-size: 12px;
+    padding: 25px;
+    font-size: 13px;
+}
+
+/* Mobile */
+@media(max-width: 380px) {
+    .gallery {
+        gap: 10px;
+    }
+
+    .polaroid img {
+        height: 125px;
+    }
+
+    .opening-card h1 {
+        font-size: 25px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- OPENING -->
+<!-- Background song: no visible audio player -->
+<audio id="bgMusic" src="song.mp3" loop preload="auto"></audio>
 
+<!-- Opening -->
 <div id="opening">
-  <div class="open-card">
-    <div class="flower">🌷</div>
-    <p class="eyebrow">A LITTLE SURPRISE FOR SOMEONE SPECIAL</p>
-    <h1>For My Special</h1>
-    <h2>Sister + Bestie ♡</h2>
-    <p>Someone made a little world just for you...</p>
-    <button onclick="enterWebsite()">Open Your Gift 💌</button>
-    <p class="small">Made with love ♡</p>
-  </div>
+    <div class="opening-card">
+        <h1>For My Emaan ♡</h1>
+        <p>
+            A little something made with love,
+            just for you. 🎀
+        </p>
+        <p>Ready for your surprise?</p>
+        <button onclick="enterWebsite()">Open Your Gift 💌</button>
+    </div>
 </div>
 
-<!-- HOME -->
+<!-- Home -->
+<section id="home" class="page active">
+    <div class="hero">
+        <h1>My Favourite Person ♡</h1>
+        <p>
+            Some people come into our lives
+            and become a beautiful part of our story.
+            You are one of those people.
+        </p>
 
-<section class="page active" id="home">
-  <div class="hero">
-    <p class="eyebrow">WELCOME TO YOUR LITTLE WORLD</p>
-    <h1>Hey, Emaan! 🎀</h1>
-    <p>A little place filled with memories, love and tiny surprises.</p>
-    <div style="font-size:35px">♡ 🌸 ♡</div>
-    <button onclick="showPage('memories')">
-      Explore Our Memories 📸
-    </button>
-  </div>
+        <div class="card">
+            <h2>Hey Emaan! 🎀</h2>
+            <p>
+                You are not just a friend,
+                you are my sister, my comfort
+                and a very special part of my life.
+            </p>
+        </div>
 
-  <div class="card">
-    <h2>Where would you like to go? 💗</h2>
-    <button onclick="showPage('memories')">Our Memories</button>
-    <button onclick="showPage('letter')">A Letter For You</button>
-    <button onclick="showPage('music')">Our Little Song 🎵</button>
-    <button onclick="showPage('reasons')">Why You're Special</button>
-    <button onclick="showPage('surprise')">One Last Surprise ✨</button>
-  </div>
+        <button onclick="showPage('memories')">Our Memories 📸</button>
+        <button onclick="showPage('letter')">A Letter For You 💌</button>
+        <button onclick="showPage('music')">Our Special Song 🎵</button>
+        <button onclick="showPage('reasons')">Reasons I Love You ♡</button>
+        <button onclick="showPage('surprise')">One Last Surprise ✨</button>
+    </div>
 </section>
 
-<!-- MEMORIES -->
+<!-- Memories -->
+<section id="memories" class="page">
+    <h1>Our Little Memories 📸</h1>
+    <p>Some moments deserve to be saved forever ♡</p>
 
-<section class="page" id="memories">
-  <p class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</p>
-  <h1>Our Little Scrapbook 📸</h1>
-  <p>Little frames, each holding a memory. ♡</p>
+    <div class="gallery">
 
-  <div class="gallery">
+        <div class="polaroid">
+            <img src="photo1.jpg" onclick="zoom(this.src)">
+            <p>Beautiful memories ♡</p>
+        </div>
 
-    <div class="polaroid" onclick="zoom(this)">
-      <img src="photo1.jpg" alt="Memory 1">
-      <p>Memory No. 01 ♡</p>
+        <div class="polaroid">
+            <img src="photo2.jpg" onclick="zoom(this.src)">
+            <p>My favourite person 🎀</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo3.jpg" onclick="zoom(this.src)">
+            <p>Little moments ♡</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo4.jpg" onclick="zoom(this.src)">
+            <p>Forever memories</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo5.jpg" onclick="zoom(this.src)">
+            <p>My happy place 💗</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo6.jpg" onclick="zoom(this.src)">
+            <p>Always special ♡</p>
+        </div>
+
     </div>
 
-    <div class="polaroid" onclick="zoom(this)">
-      <img src="photo2.jpg" alt="Memory 2">
-      <p>Memory No. 02 🌷</p>
-    </div>
-
-    <div class="polaroid" onclick="zoom(this)">
-      <img src="photo3.jpg" alt="Memory 3">
-      <p>Memory No. 03 ♡</p>
-    </div>
-
-    <div class="polaroid" onclick="zoom(this)">
-      <img src="photo4.jpg" alt="Memory 4">
-      <p>Memory No. 04 🎀</p>
-    </div>
-
-    <div class="polaroid" onclick="zoom(this)">
-      <img src="photo5.jpg" alt="Memory 5">
-      <p>Memory No. 05 ♡</p>
-    </div>
-
-    <div class="polaroid" onclick="zoom(this)">
-      <img src="photo6.jpg" alt="Memory 6">
-      <p>Memory No. 06 🌸</p>
-    </div>
-
-  </div>
-
-  <button onclick="showPage('home')">Home 🏡</button>
-  <button onclick="showPage('letter')">Next 💌</button>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('letter')">Next 💌</button>
 </section>
 
-<!-- LETTER -->
+<!-- Letter -->
+<section id="letter" class="page">
+    <h1>A Little Letter For You 💌</h1>
 
-<section class="page" id="letter">
-  <p class="eyebrow">SOMETHING FROM MY HEART</p>
-  <h1>A Letter For You 💌</h1>
+    <div class="card letter">
+Dear Emaan,
 
-  <div class="letter">
-    Dear Emaan,
+I wanted to make something that was a little different from an ordinary gift.
 
-    <br><br>
-    I wanted to make something that was a little different from an ordinary gift.
+Tm se achii dost mujhy kaabhi nhi mili hogi tm mery liay bohat special ho.
 
-    <br><br>
-    Tm se achii dost mujhy kaabhi nhi mili hogi tm mery liay bohat special ho.
+I hope life gives you countless reasons to smile. I hope you achieve everything you dream of, and never forget how valuable you are.
 
-    <br><br>
-    I hope life gives you countless reasons to smile. I hope you achieve everything you dream of, and never forget how valuable you are.
+Tmhari jagah koi bhi hota to mujh jesi larki se ab tk dosti khatam kr chuka hota :(
 
-    <br><br>
-    Tmhari jagah koi bhi hota to mujh jesi larki se ab tk dosti khatam kr chuka hota :(
+Thank you for being a part of my life. I hope our friendship always stays this beautiful.
 
-    <br><br>
-    I love youu januuuu
-    <br>
-    Your Bestie ♡
-  </div>
+I love youu januuuu ♡
 
-  <button onclick="showPage('home')">Home 🏡</button>
-  <button onclick="showPage('music')">Next 🎵</button>
+Your Bestie ♡
+    </div>
+
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('music')">Next 🎵</button>
 </section>
 
-<!-- MUSIC -->
-
+<!-- Music -->
 <section id="music" class="page">
-
-  <div class="song-container">
-
-    <h1>Song That I Dedicated To Youuhh♡</h1>
-
-    <p>Just listen and enjoy this moment 🎀</p>
-
     <div class="music-box">
 
-      <div class="music-icon">🎵</div>
+        <div class="music-icon">🎵</div>
 
-      <h2>Our Special Song</h2>
+        <h2>Song That I Dedicated To You</h2>
 
-      <p>Chlo Door Kahin - Samar Jafri ♡</p>
+        <p>Chalo Door Kahin by Samar Jaffri ♡</p>
 
     </div>
 
-    <button onclick="showPage('home')">Home 🏡</button>
-    <button onclick="showPage('reasons')">Next 🌷</button>
-
-  </div>
-
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('reasons')">Next 💗</button>
 </section>
 
-<!-- HIDDEN BACKGROUND AUDIO -->
+<!-- Reasons -->
+<section id="reasons" class="page">
+    <h1>Reasons I Love You ♡</h1>
 
-<audio id="bgMusic" loop preload="auto">
-  <source src="song.mp3" type="audio/mpeg">
-</audio>
+    <div class="reason">
+        <p>♡ Because you make ordinary moments special.</p>
+    </div>
 
-<!-- REASONS -->
+    <div class="reason">
+        <p>♡ Because I can be myself around you.</p>
+    </div>
 
-<section class="page" id="reasons">
-  <p class="eyebrow">A FEW LITTLE THINGS</p>
-  <h1>Why You're Special 🌷</h1>
+    <div class="reason">
+        <p>♡ Because your presence means a lot to me.</p>
+    </div>
 
-  <div class="card">
-    <h2>01 ♡</h2>
-    <p>Because you have your own special place in my life.</p>
-  </div>
+    <div class="reason">
+        <p>♡ Because you are YOU, and that's enough.</p>
+    </div>
 
-  <div class="card">
-    <h2>02 ♡</h2>
-    <p>Because ap hamesha mera khayal rakhti ho</p>
-  </div>
-
-  <div class="card">
-    <h2>03 ♡</h2>
-    <p>Because apki khushi mery liay matter krti hai.</p>
-  </div>
-
-  <div class="card">
-    <h2>04 ♡</h2>
-    <p>Because koi ap jesa nhi ho skta.</p>
-  </div>
-
-  <button onclick="showPage('home')">Home 🏡</button>
-  <button onclick="showPage('surprise')">Final Surprise ✨</button>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('surprise')">Next ✨</button>
 </section>
 
-<!-- FINAL SURPRISE -->
+<!-- Final Surprise -->
+<section id="surprise" class="page">
+    <h1>One Last Thing ♡</h1>
 
-<section class="page" id="surprise">
-  <div class="hero">
-    <div style="font-size:55px">💗</div>
-    <p class="eyebrow">ONE LAST LITTLE THING</p>
-    <h1>Dear Emaan...</h1>
-    <p>Out of all the little things in life, some people become memories we always want to keep.</p>
-    <h2>I'm glad you're one of mine. ♡</h2>
-    <p>Keep smiling, keep shining and stay the wonderful person you are.</p>
-    <div style="font-size:35px">🌷 🎀 🌷</div>
-    <button onclick="showPage('home')">Visit Again 🏡</button>
-  </div>
+    <div class="card surprise">
+        <p>
+            No matter how many people we meet
+            or how many memories we make,
+            some friendships will always have
+            a special place in our hearts.
+        </p>
+
+        <p>
+            And you will always be
+            one of my favourite chapters. 💗
+        </p>
+
+        <h2>Love You Emaan! 🎀</h2>
+    </div>
+
+    <button onclick="showPage('home')">Back To Beginning ♡</button>
 </section>
 
-<!-- IMAGE VIEWER -->
-
-<div id="photoView" onclick="this.style.display='none'">
-  <img id="bigPhoto" src="" alt="Memory">
+<!-- Photo zoom -->
+<div id="photoView" onclick="closeZoom()">
+    <img id="zoomedPhoto" src="" alt="Memory">
 </div>
 
 <footer>
-  Made with love, just for Emaan ♡
+    Made with love, just for you ♡
 </footer>
 
 <script>
-
-// Opening and background music
-
 function enterWebsite() {
+    const opening = document.getElementById('opening');
+    const music = document.getElementById('bgMusic');
 
-  const opening = document.getElementById('opening');
-  const music = document.getElementById('bgMusic');
+    // Start background music after the button is clicked
+    music.play().catch(function() {
+        console.log("Please check the song.mp3 file.");
+    });
 
-  opening.style.opacity = '0';
+    opening.style.opacity = '0';
 
-  music.play().catch(error => {
-    console.log("Music playback was blocked.");
-  });
-
-  setTimeout(() => {
-    opening.style.display = 'none';
-  }, 800);
+    setTimeout(function() {
+        opening.style.display = 'none';
+    }, 800);
 }
-
-// Navigation
 
 function showPage(id) {
+    document.querySelectorAll('.page').forEach(function(page) {
+        page.classList.remove('active');
+    });
 
-  document.querySelectorAll('.page').forEach(page => {
-    page.classList.remove('active');
-  });
+    document.getElementById(id).classList.add('active');
 
-  const selectedPage = document.getElementById(id);
-
-  if (selectedPage) {
-    selectedPage.classList.add('active');
-  }
-
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
-// Photo zoom
-
-function zoom(element) {
-
-  const img = element.querySelector('img');
-
-  if (!img.complete || !img.naturalWidth) {
-    alert('Please add your picture first!');
-    return;
-  }
-
-  document.getElementById('bigPhoto').src = img.src;
-  document.getElementById('photoView').style.display = 'flex';
+function zoom(src) {
+    document.getElementById('zoomedPhoto').src = src;
+    document.getElementById('photoView').style.display = 'flex';
 }
 
-// Floating hearts
+function closeZoom() {
+    document.getElementById('photoView').style.display = 'none';
+}
 
 function createHeart() {
+    const heart = document.createElement('div');
 
-  const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = ['♡', '💗', '💕', '🎀'][Math.floor(Math.random() * 4)];
 
-  heart.className = 'heart';
-  heart.innerHTML = Math.random() > .5 ? '♡' : '♥';
-  heart.style.left = Math.random() * 100 + 'vw';
-  heart.style.fontSize = (15 + Math.random() * 18) + 'px';
+    heart.style.left = Math.random() * 100 + 'vw';
 
-  document.body.appendChild(heart);
+    document.body.appendChild(heart);
 
-  setTimeout(() => heart.remove(), 7000);
+    setTimeout(function() {
+        heart.remove();
+    }, 6000);
 }
 
 setInterval(createHeart, 900);
-
 </script>
 
 </body>
-      </html>
+          </html>
   
