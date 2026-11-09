@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,13 +32,8 @@ button {
 
 button:active { transform: scale(.96); }
 
-h1 {
-  color: #a34f75;
-  font-size: 35px;
-}
-
+h1 { color: #a34f75; font-size: 35px; }
 h2 { color: #a34f75; }
-
 p { line-height: 1.9; }
 
 .page {
@@ -173,9 +169,15 @@ p { line-height: 1.9; }
   max-width: 400px;
 }
 
-audio {
-  width: 100%;
-  margin-top: 15px;
+.music-icon {
+  font-size: 45px;
+  animation: sway 3s infinite ease-in-out;
+}
+
+/* Completely hide audio controls */
+
+#bgMusic {
+  display: none;
 }
 
 /* Floating hearts */
@@ -350,28 +352,35 @@ footer {
 <!-- MUSIC -->
 
 <section id="music" class="page">
+
   <div class="song-container">
 
     <h1>Song That I Dedicated To Youuhh♡</h1>
+
     <p>Just listen and enjoy this moment 🎀</p>
 
     <div class="music-box">
+
       <div class="music-icon">🎵</div>
+
       <h2>Our Special Song</h2>
+
       <p>Chlo Door Kahin - Samar Jafri ♡</p>
 
-      <audio id="bgMusic" controls loop>
-        <source src="song.mp3" type="audio/mpeg">
-      </audio>
     </div>
 
-    <div class="navigation">
-      <button onclick="showPage('home')">Home 🏡</button>
-      <button onclick="showPage('reasons')">Next 🌷</button>
-    </div>
+    <button onclick="showPage('home')">Home 🏡</button>
+    <button onclick="showPage('reasons')">Next 🌷</button>
 
   </div>
+
 </section>
+
+<!-- HIDDEN BACKGROUND AUDIO -->
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
 
 <!-- REASONS -->
 
@@ -430,20 +439,25 @@ footer {
 
 <script>
 
+// Opening and background music
+
 function enterWebsite() {
+
   const opening = document.getElementById('opening');
   const music = document.getElementById('bgMusic');
 
   opening.style.opacity = '0';
 
   music.play().catch(error => {
-    console.log("Music playback needs user interaction.");
+    console.log("Music playback was blocked.");
   });
 
   setTimeout(() => {
     opening.style.display = 'none';
   }, 800);
 }
+
+// Navigation
 
 function showPage(id) {
 
@@ -463,6 +477,8 @@ function showPage(id) {
   });
 }
 
+// Photo zoom
+
 function zoom(element) {
 
   const img = element.querySelector('img');
@@ -475,6 +491,8 @@ function zoom(element) {
   document.getElementById('bigPhoto').src = img.src;
   document.getElementById('photoView').style.display = 'flex';
 }
+
+// Floating hearts
 
 function createHeart() {
 
@@ -495,4 +513,5 @@ setInterval(createHeart, 900);
 </script>
 
 </body>
-                               </html>
+      </html>
+  
