@@ -331,28 +331,32 @@ footer {
   </div>
 
   <button onclick="showPage('home')">Home 🏡</button>
-  <button onclick="showPage('music')">Play Our Song 🎵</button>
+  <button onclick="showPage('music')">Next 🎵</button>
 </section>
 
 <!-- MUSIC -->
+<section id="song" class="page">
+  <div class="song-container">
 
-<section class="page" id="music">
-  <p class="eyebrow">SONG THAT I DEDICATED TO YOUUHH<3</p>
-  <h1>Our Little Song 🎵</h1>
-      
-    <div style="font-size:55px">🎀</div>
-    <h2>Chalo Durr Kahin</h2>
-    <p>Samar Jafri</p>
+    <h1>Song That I Dedicated To Youuhh♡</h1>
+    <p>Just listen and enjoy this moment 🎀</p>
 
-    <audio id="bgMusic"preload="none">
-      <source src="song.mp3" type="audio/mpeg">
-      Your browser does not support audio.
-    </>
-    <p class="small">Add your permitted audio file as music/song.mp3</p>
+    <div class="music-box">
+      <div class="music-icon">🎵</div>
+      <h2>Our Special Song</h2>
+      <p>Chlo Door Kahin - Samar Jafri ♡</p>
+
+      <audio id="bgMusic" controls loop>
+        <source src="song.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="navigation">
+      <button onclick="showPage('home')">Home 🏡</button>
+      <button onclick="showPage('reasons')">Next 🌷</button>
+    </div>
+
   </div>
-
-  <button onclick="showPage('home')">Home 🏡</button>
-  <button onclick="showPage('reasons')">Next 🌷</button>
 </section>
 
 <!-- REASONS -->
